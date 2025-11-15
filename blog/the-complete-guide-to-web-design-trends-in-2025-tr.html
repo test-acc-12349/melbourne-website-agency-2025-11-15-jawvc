@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Melbourne Website Agency - Custom Web Design, SEO Optimized, Mobile Responsive. Boost your online visibility and drive more leads with our professional web solutions.">
+    <meta name="keywords" content="web design, SEO, mobile responsive, Melbourne, website agency">
+    <meta name="author" content="Melbourne Website Agency">
+    <title>Melbourne Website Agency - Custom Web Design & SEO Solutions</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background-color: #ffffff;
+            color: #1a1a1a;
+        }
+        
+        .primary-gradient {
+            background: linear-gradient(135deg, #5B4BFF 0%, #7c6cff 100%);
+        }
+        
+        .secondary-bg {
+            background-color: #EEF0FF;
+        }
+        
+        .accent-color {
+            color: #00E5A8;
+        }
+        
+        .accent-bg {
+            background-color: #00E5A8;
+        }
+        
+        .primary-color {
+            color: #5B4BFF;
+        }
+        
+        .btn-primary {
+            background-color: #5B4BFF;
+            color: white;
+            transition: all 0.3s ease-out;
+        }
+        
+        .btn-primary:hover {
+            background-color: #4a3acc;
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(91, 75, 255, 0.3);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease-out;
+        }
+        
+        .card-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card {
+            border-radius: 16px;
+            padding: 32px;
+            background-color: #ffffff;
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease-out;
+        }
+        
+        .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(91, 75, 255, 0.1);
+            border-color: #5B4BFF;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #ffffff 0%, #EEF0FF 100%);
+        }
+        
+        .testimonial-card {
+            border-radius: 16px;
+            padding: 28px;
+            background-color: #ffffff;
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease-out;
+        }
+        
+        .testimonial-card:hover {
+            box-shadow: 0 20px 50px rgba(91, 75, 255, 0.1);
+            border-color: #5B4BFF;
+        }
+        
+        .faq-item {
+            border-radius: 16px;
+            border: 1px solid #f0f0f0;
+            overflow: hidden;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-question {
+            padding: 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-question:hover {
+            background-color: #EEF0FF;
+        }
+        
+        .faq-answer {
+            padding: 24px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #f0f0f0;
+            max-height: 500px;
+            overflow: hidden;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-answer.hidden {
+            max-height: 0;
+            padding: 0 24px;
+            display: none;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease-out;
+            color: #5B4BFF;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #666666;
+            max-width: 600px;
+        }
+        
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease-out;
+        }
+        
+        .mobile-menu.hidden {
+            display: none;
+        }
+        
+        .star-rating {
+            color: #fbbf24;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #5B4BFF 0%, #7c6cff 100%);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .cta-overlay {
+            background-color: rgba(91, 75, 255, 0.85);
+        }
+        
+        .footer-link {
+            transition: all 0.3s ease-out;
+            color: #666666;
+        }
+        
+        .footer-link:hover {
+            color: #5B4BFF;
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease-out;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #EEF0FF;
+            color: #5B4BFF;
+        }
+        
+        .social-icon:hover {
+            background-color: #5B4BFF;
+            color: white;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="sticky-header shadow-sm">
+        <nav class="max-w-7xl mx-auto px-8 md:px-16 py-5 flex justify-between items-center">
+            <div class="flex items-center justify-between w-full">
+                <a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc" class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full primary-gradient flex items-center justify-center">
+                        <i class="fas fa-globe text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl font-bold primary-color hidden sm:inline">Melbourne Agency</span>
+                </a>
+                <a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc/blog.html" class="text-gray-700 font-medium hover:primary-color transition-colors duration-300">
+                    ← Back
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Content -->
+    <main class="max-w-4xl mx-auto px-4 py-12 md:py-16">
+        <article class="prose prose-lg max-w-none">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">The Complete Guide to Web Design Trends in 2025: Transform Your Online Presence</h1>
+            
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=675&fit=crop&q=80" alt="Modern web design dashboard showing latest design trends and analytics" class="w-full rounded-lg shadow-lg mb-8">
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                The digital landscape is evolving at an unprecedented pace, and web design is at the forefront of this transformation. As we navigate through 2025, businesses must understand the latest design trends to remain competitive and engage their audiences effectively. The intersection of aesthetics, functionality, and user experience has never been more critical. This comprehensive guide explores the most impactful web design trends that are reshaping how companies present themselves online and connect with their customers.
+            </p>
+            
+            <p class="mb-6 leading-relaxed text-gray-700">
+                Whether you're a startup looking to establish your digital presence or an established business seeking to modernize your website, understanding these trends will help you make informed decisions about your web design strategy. From AI-powered personalization to minimalist interfaces, the trends we'll explore represent the future of digital design and user engagement.
+            </p>
+            
+            <h2 class="text-3xl font-semibold mt-8 mb-4 text-gray-900">1. AI-Powered Personalization and Dynamic Content</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Artificial intelligence has revolutionized how websites interact with visitors. In 2025, AI-powered personalization is no longer a luxury—it's an expectation. Websites are now using machine learning algorithms to analyze user behavior in real-time and deliver customized content experiences tailored to individual preferences, browsing history, and demographic data.
+            </p>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                This trend goes beyond simple recommendations. Modern web design incorporates AI to predict what users want before they even know it themselves. Dynamic content that changes based on user behavior, location, and device type creates a more engaging and relevant experience. For Melbourne businesses, implementing AI personalization can significantly increase conversion rates and customer satisfaction, as visitors feel the website is speaking directly to their needs.
+            </p>
+            
+            <h3 class="text-2xl font-medium mt-6 mb-3 text-gray-800">How AI Personalization Benefits Your Business</h3>
+            
+            <ul class="list-disc list-inside mb-6 space-y-2">
+                <li class="text-gray-700">Increased conversion rates through targeted content delivery</li>
+                <li class="text-gray-700">Improved user engagement and time-on-site metrics</li>
+                <li class="text-gray-700">Enhanced customer insights and behavioral analytics</li>
+                <li class="text-gray-700">Better customer retention through personalized experiences</li>
+                <li class="text-gray-700">Competitive advantage in your industry</li>
+            </ul>
+            
+            <p class="mb-6 leading-relaxed text-gray-700">
+                The implementation of AI personalization requires sophisticated backend infrastructure and data management systems. Web design agencies like Melbourne Website Agency are helping businesses integrate these technologies seamlessly into their existing platforms, ensuring that personalization enhances rather than complicates the user experience.
+            </p>
+            
+            <h2 class="text-3xl font-semibold mt-8 mb-4 text-gray-900">2. Minimalist Design with Bold Typography</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                While maximalism had its moment, 2025 is witnessing a strong resurgence of minimalist design principles combined with bold, expressive typography. This trend emphasizes clean layouts, ample white space, and strategic use of color to create designs that are both visually striking and easy to navigate. The philosophy behind this approach is simple: less is more, but what remains must be impactful.
+            </p>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Bold typography serves as the hero element in minimalist designs, drawing attention to key messages and creating visual hierarchy without relying on excessive graphics or decorative elements. Large, carefully chosen fonts create immediate impact and improve readability, particularly on mobile devices where screen real estate is limited. This approach aligns perfectly with SEO best practices, as search engines favor clean, well-structured content.
+            </p>
+            
+            <h3 class="text-2xl font-medium mt-6 mb-3 text-gray-800">Why Minimalist Design Works in 2025</h3>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Minimalist design reduces cognitive load for users, allowing them to focus on what matters most. In an era of information overload, websites that respect users' attention and provide clear, uncluttered interfaces stand out. This design philosophy also improves page load speeds, reduces bounce rates, and creates a more professional, trustworthy appearance—all factors that contribute to better SEO rankings and higher conversion rates.
+            </p>
+            
+            <p class="mb-6 leading-relaxed text-gray-700">
+                For Melbourne businesses, adopting minimalist design with bold typography signals modernity and sophistication. It demonstrates that your company understands current design trends and values user experience. This approach is particularly effective for service-based businesses, professional firms, and B2B companies that need to establish credibility and trust.
+            </p>
+            
+            <h2 class="text-3xl font-semibold mt-8 mb-4 text-gray-900">3. Mobile-First and Progressive Web Apps</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Mobile-first design is no longer a trend—it's a fundamental requirement. In 2025, the majority of web traffic originates from mobile devices, making mobile optimization not just important but essential. However, the trend has evolved beyond simple responsive design. Progressive Web Apps (PWAs) are now becoming the standard for businesses that want to provide app-like experiences without requiring users to download native applications.
+            </p>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                PWAs combine the best of web and mobile applications, offering features like offline functionality, push notifications, and home screen installation. They load faster than traditional websites, provide seamless user experiences, and can significantly improve engagement metrics. For Melbourne-based businesses, implementing PWA technology can reduce development costs while delivering superior mobile experiences that rival native apps.
+            </p>
+            
+            <h3 class="text-2xl font-medium mt-6 mb-3 text-gray-800">Key Features of Mobile-First Design in 2025</h3>
+            
+            <ul class="list-disc list-inside mb-6 space-y-2">
+                <li class="text-gray-700">Touch-friendly interfaces optimized for mobile interaction</li>
+                <li class="text-gray-700">Fast loading times with optimized images and code</li>
+                <li class="text-gray-700">Progressive enhancement for varying network conditions</li>
+                <li class="text-gray-700">Voice search optimization for mobile users</li>
+                <li class="text-gray-700">Seamless cross-device experience and synchronization</li>
+            </ul>
+            
+            <p class="mb-6 leading-relaxed text-gray-700">
+                The shift toward mobile-first design reflects changing user behavior and expectations. Consumers now expect websites to work flawlessly on their phones, with intuitive navigation and fast load times. Businesses that fail to prioritize mobile design risk losing significant portions of their audience and seeing their search rankings decline, as Google prioritizes mobile-friendly websites in its ranking algorithms.
+            </p>
+            
+            <h2 class="text-3xl font-semibold mt-8 mb-4 text-gray-900">4. Sustainable and Eco-Conscious Web Design</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Environmental consciousness is increasingly influencing design decisions. Sustainable web design focuses on reducing the carbon footprint of websites by optimizing code, minimizing unnecessary elements, and choosing energy-efficient hosting solutions. This trend reflects growing consumer awareness of environmental issues and the desire to support businesses that demonstrate corporate responsibility.
+            </p>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Green web design isn't just about environmental ethics—it also improves performance. Optimized websites load faster, consume less bandwidth, and provide better user experiences. For Melbourne businesses, adopting sustainable design practices demonstrates commitment to environmental responsibility while simultaneously improving website performance, SEO rankings, and user satisfaction.
+            </p>
+            
+            <h3 class="text-2xl font-medium mt-6 mb-3 text-gray-800">Implementing Sustainable Web Design Practices</h3>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Sustainable web design involves several practical strategies. Reducing image file sizes through compression, using efficient coding practices, implementing lazy loading for content, and choosing green hosting providers all contribute to lower energy consumption. Additionally, designing for longevity—creating websites that don't require frequent redesigns—reduces waste and environmental impact. These practices align perfectly with modern SEO principles, as search engines reward fast, efficient websites with higher rankings.
+            </p>
+            
+            <p class="mb-6 leading-relaxed text-gray-700">
+                By embracing sustainable web design, Melbourne businesses can appeal to environmentally conscious consumers, reduce operational costs, and improve their digital presence simultaneously. This approach represents a win-win scenario where ethical business practices directly translate to better business outcomes.
+            </p>
+            
+            <h2 class="text-3xl font-semibold mt-8 mb-4 text-gray-900">5. Interactive and Immersive Experiences</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Static websites are becoming relics of the past. In 2025, interactive and immersive experiences are essential for capturing and maintaining user attention. This includes micro-interactions, animated transitions, parallax scrolling, and even augmented reality (AR) elements that engage users and create memorable brand experiences. These interactive elements aren't just decorative—they serve functional purposes, guiding users through content and enhancing storytelling.
+            </p>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Immersive experiences can include 3D product visualizations, virtual showrooms, interactive data visualizations, and gamified elements that encourage user engagement. For Melbourne e-commerce businesses, these features can dramatically increase product interest and conversion rates. For service-based companies, interactive elements can better communicate value propositions and build stronger connections with potential clients.
+            </p>
+            
+            <h3 class="text-2xl font-medium mt-6 mb-3 text-gray-800">Benefits of Interactive Web Design</h3>
+            
+            <ul class="list-disc list-inside mb-6 space-y-2">
+                <li class="text-gray-700">Increased user engagement and time spent on website</li>
+                <li class="text-gray-700">Enhanced brand recall and emotional connections</li>
+                <li class="text-gray-700">Improved conversion rates through guided user experiences</li>
+                <li class="text-gray-700">Better differentiation from competitors</li>
+                <li class="text-gray-700">Increased social sharing and word-of-mouth marketing</li>
+            </ul>
+            
+            <p class="mb-6 leading-relaxed text-gray-700">
+                However, interactive elements must be implemented thoughtfully. Excessive animations can slow down websites and frustrate users, particularly on slower connections. The key is balance—using interactive elements strategically to enhance user experience without compromising performance or accessibility.
+            </p>
+            
+            <h2 class="text-3xl font-semibold mt-8 mb-4 text-gray-900">6. Voice Search and Conversational Interfaces</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                The rise of voice assistants and smart speakers has transformed how people search for information online. Voice search optimization is now a critical component of web design strategy. Websites must be optimized for conversational queries, featured snippets, and voice-friendly content structures. This shift requires rethinking keyword strategies and content organization to align with how people naturally speak.
+            </p>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Conversational interfaces, including chatbots and AI assistants, are becoming standard features on modern websites. These interfaces provide instant customer support, answer frequently asked questions, and guide users through sales funnels. For Melbourne businesses, implementing voice search optimization and conversational interfaces can capture growing segments of voice-searching users and provide competitive advantages in customer service.
+            </p>
+            
+            <h3 class="text-2xl font-medium mt-6 mb-3 text-gray-800">Optimizing for Voice Search in 2025</h3>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Voice search optimization requires focusing on long-tail keywords, natural language phrases, and question-based content. Websites should include FAQ sections, conversational content, and structured data markup to help voice assistants understand and present your content. Local businesses in Melbourne particularly benefit from voice search optimization, as many voice searches are location-based ("near me" queries).
+            </p>
+            
+            <p class="mb-6 leading-relaxed text-gray-700">
+                Implementing conversational interfaces requires balancing automation with human touch. While AI-powered chatbots handle routine inquiries efficiently, users should always have the option to connect with human representatives for complex issues. This hybrid approach maximizes efficiency while maintaining customer satisfaction.
+            </p>
+            
+            <h2 class="text-3xl font-semibold mt-8 mb-4 text-gray-900">7. Advanced SEO and Technical Excellence</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Web design and SEO are now inseparable. In 2025, technical excellence is fundamental to successful web design. This includes optimized site architecture, fast loading speeds, mobile responsiveness, clean code, and proper implementation of structured data. Search engines reward websites that provide excellent user experiences, making technical optimization a critical component of any design strategy.
+            </p>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Core Web Vitals—metrics measuring page speed, interactivity, and visual stability—directly impact search rankings. Websites must prioritize these metrics during design and development. For Melbourne businesses, investing in technically excellent web design directly translates to better search visibility, more organic traffic, and higher quality leads.
+            </p>
+            
+            <h3 class="text-2xl font-medium mt-6 mb-3 text-gray-800">Technical SEO Essentials for Modern Web Design</h3>
+            
+            <ul class="list-disc list-inside mb-6 space-y-2">
+                <li class="text-gray-700">Page speed optimization and lazy loading implementation</li>
+                <li class="text-gray-700">Mobile-first indexing and responsive design</li>
+                <li class="text-gray-700">Structured data markup and schema implementation</li>
+                <li class="text-gray-700">Clean URL structures and internal linking strategies</li>
+                <li class="text-gray-700">XML sitemaps and robots.txt optimization</li>
+                <li class="text-gray-700">SSL certificates and security implementation</li>
+            </ul>
+            
+            <p class="mb-6 leading-relaxed text-gray-700">
+                Technical excellence requires ongoing attention and optimization. Search algorithms continuously evolve, and websites must adapt to maintain competitive rankings. Working with experienced web design agencies that understand SEO ensures your website remains optimized for current and future search requirements.
+            </p>
+            
+            <h2 class="text-3xl font-semibold mt-8 mb-4 text-gray-900">Implementing These Trends: A Strategic Approach</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Understanding web design trends is one thing; implementing them effectively is another. The most successful approach involves evaluating which trends align with your business goals, target audience, and resources. Not every business needs every trend—the key is strategic selection based on your specific circumstances.
+            </p>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Start by assessing your current website's performance and identifying areas for improvement. Analyze user behavior, conversion metrics, and competitor strategies. Then prioritize implementing trends that will have the most significant impact on your business objectives. Whether you're focused on increasing conversions, improving SEO rankings, or enhancing user engagement, there are specific trends that will deliver the best results for your situation.
+            </p>
+            
+            <h3 class="text-2xl font-medium mt-6 mb-3 text-gray-800">Creating Your Web Design Roadmap</h3>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Developing a comprehensive web design strategy requires understanding your business goals, target audience, and competitive landscape. Consider these questions: What are your primary business objectives? How do your customers prefer to interact with businesses? What technical resources do you have available? What's your budget for web design and development?
+            </p>
+            
+            <p class="mb-6 leading-relaxed text-gray-700">
+                Once you've answered these questions, you can create a prioritized roadmap for implementing web design trends. This might involve phased implementation, starting with high-impact changes and gradually introducing more advanced features. Working with experienced web design professionals ensures your strategy aligns with industry best practices and delivers measurable results.
+            </p>
+            
+            <h2 class="text-3xl font-semibold mt-8 mb-4 text-gray-900">Conclusion: The Future of Web Design</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                The web design trends of 2025 represent a fundamental shift toward more intelligent, user-centric, and sustainable digital experiences. From AI personalization to mobile-first design, these trends reflect evolving user expectations and technological capabilities. Businesses that embrace these trends position themselves for success in an increasingly competitive digital landscape.
+            </p>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                For Melbourne businesses, staying ahead of web design trends isn't just about maintaining relevance—it's about driving real business results. Modern web design directly impacts search engine rankings, user engagement, conversion rates, and ultimately, revenue. By understanding and strategically implementing these trends, you can create websites that not only look beautiful but also perform exceptionally well.
+            </p>
+            
+            <p class="mb-6 leading-relaxed text-gray-700">
+                The investment in modern web design pays dividends through improved customer experiences, higher search visibility, and increased business growth. Whether you're redesigning an existing website or building a new one, incorporating these trends ensures your digital presence remains competitive and effective. The future of web design is here, and businesses that embrace it will thrive in the digital economy.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mt-8 rounded">
+                <p class="text-gray-800 font-semibold mb-2">Ready to Transform Your Website?</p>
+                <p class="text-gray-700 mb-4">
+                    Melbourne Website Agency specializes in implementing cutting-edge web design trends that drive real business results. Our team of experienced designers and developers combines aesthetic excellence with technical expertise to create websites that perform exceptionally well.
+                </p>
+                <a href="#contact" class="inline-block btn-primary rounded-full px-6 py-3 font-semibold transition-all duration-300 hover:shadow-lg">
+                    Get Started Today
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16 md:py-20 mt-16">
+        <div class="max-w-7xl mx-auto px-8 md:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full primary-gradient flex items-center justify-center">
+                            <i class="fas fa-globe text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">Melbourne Agency</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Creating exceptional web experiences that drive business growth and digital transformation.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#features" class="footer-link">Web Design</a></li>
+                        <li><a href="#features" class="footer-link">SEO Optimization</a></li>
+                        <li><a href="#features" class="footer-link">Mobile Development</a></li>
+                        <li><a href="#benefits" class="footer-link">Digital Marketing</a></li>
+                        <li><a href="#benefits" class="footer-link">Brand Strategy</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="footer-link">About Us</a></li>
+                        <li><a href="#testimonials" class="footer-link">Testimonials</a></li>
+                        <li><a href="blog.html" class="footer-link">Blog</a></li>
+                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                        <li><a href="#" class="footer-link">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
+                        <li><a href="#" class="footer-link">Cookie Policy</a></li>
+                        <li><a href="#" class="footer-link">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Divider -->
+            <div class="border-t border-gray-800 pt-8 md:pt-12">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2025 Melbourne Website Agency. All rights reserved.
+                    </p>
+                    <div class="flex gap-6">
+                        <a href="privacy.html" class="text-gray-400 text-sm hover:text-white transition-colors duration-300">Privacy</a>
+                        <a href="terms.html" class="text-gray-400 text-sm hover:text-white transition-colors duration-300">Terms</a>
+                        <a href="blog.html" class="text-gray-400 text-sm hover:text-white transition-colors duration-300">Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // FAQ Accordion Toggle (if FAQ section exists)
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        const answer = item.querySelector('.faq-answer');
+                        const isOpen = !answer.classList.contains('hidden');
+                        
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.querySelector('.faq-answer')?.classList.add('hidden');
+                                otherItem.querySelector('.faq-icon')?.classList.remove('rotate-180');
+                            }
+                        });
+                        
+                        // Toggle current item
+                        answer?.classList.toggle('hidden');
+                        item.querySelector('.faq-icon')?.classList.toggle('rotate-180');
+                    });
+                }
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
