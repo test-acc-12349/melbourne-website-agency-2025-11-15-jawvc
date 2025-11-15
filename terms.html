@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Melbourne Website Agency - Custom Web Design, SEO Optimized, Mobile Responsive. Boost your online visibility and drive more leads with our professional web solutions.">
+    <meta name="keywords" content="web design, SEO, mobile responsive, Melbourne, website agency">
+    <meta name="author" content="Melbourne Website Agency">
+    <title>Terms of Service - Melbourne Website Agency</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background-color: #ffffff;
+            color: #1a1a1a;
+        }
+        
+        .primary-gradient {
+            background: linear-gradient(135deg, #5B4BFF 0%, #7c6cff 100%);
+        }
+        
+        .secondary-bg {
+            background-color: #EEF0FF;
+        }
+        
+        .accent-color {
+            color: #00E5A8;
+        }
+        
+        .accent-bg {
+            background-color: #00E5A8;
+        }
+        
+        .primary-color {
+            color: #5B4BFF;
+        }
+        
+        .btn-primary {
+            background-color: #5B4BFF;
+            color: white;
+            transition: all 0.3s ease-out;
+        }
+        
+        .btn-primary:hover {
+            background-color: #4a3acc;
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(91, 75, 255, 0.3);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease-out;
+        }
+        
+        .card-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card {
+            border-radius: 16px;
+            padding: 32px;
+            background-color: #ffffff;
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease-out;
+        }
+        
+        .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(91, 75, 255, 0.1);
+            border-color: #5B4BFF;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #ffffff 0%, #EEF0FF 100%);
+        }
+        
+        .testimonial-card {
+            border-radius: 16px;
+            padding: 28px;
+            background-color: #ffffff;
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease-out;
+        }
+        
+        .testimonial-card:hover {
+            box-shadow: 0 20px 50px rgba(91, 75, 255, 0.1);
+            border-color: #5B4BFF;
+        }
+        
+        .faq-item {
+            border-radius: 16px;
+            border: 1px solid #f0f0f0;
+            overflow: hidden;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-question {
+            padding: 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-question:hover {
+            background-color: #EEF0FF;
+        }
+        
+        .faq-answer {
+            padding: 24px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #f0f0f0;
+            max-height: 500px;
+            overflow: hidden;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-answer.hidden {
+            max-height: 0;
+            padding: 0 24px;
+            display: none;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease-out;
+            color: #5B4BFF;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #666666;
+            max-width: 600px;
+        }
+        
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease-out;
+        }
+        
+        .mobile-menu.hidden {
+            display: none;
+        }
+        
+        .star-rating {
+            color: #fbbf24;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #5B4BFF 0%, #7c6cff 100%);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .cta-overlay {
+            background-color: rgba(91, 75, 255, 0.85);
+        }
+        
+        .footer-link {
+            transition: all 0.3s ease-out;
+            color: #666666;
+        }
+        
+        .footer-link:hover {
+            color: #5B4BFF;
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease-out;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #EEF0FF;
+            color: #5B4BFF;
+        }
+        
+        .social-icon:hover {
+            background-color: #5B4BFF;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .policy-section {
+            margin-bottom: 48px;
+        }
+
+        .policy-section h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            margin-top: 32px;
+        }
+
+        .policy-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333333;
+            margin-bottom: 12px;
+            margin-top: 20px;
+        }
+
+        .policy-section p {
+            color: #666666;
+            line-height: 1.75;
+            margin-bottom: 16px;
+        }
+
+        .policy-section ul {
+            list-style-type: disc;
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        .policy-section li {
+            color: #666666;
+            line-height: 1.75;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="sticky-header shadow-sm">
+        <nav class="max-w-7xl mx-auto px-8 md:px-16 py-5 flex justify-between items-center">
+            <div class="flex items-center justify-between w-full">
+                <!-- Logo -->
+                <a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc" class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full primary-gradient flex items-center justify-center">
+                        <i class="fas fa-globe text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl font-bold primary-color hidden sm:inline">Melbourne Agency</span>
+                </a>
+                
+                <!-- Back Button -->
+                <a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc" class="text-gray-700 font-medium hover:primary-color transition-colors duration-300 flex items-center gap-2">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="hidden sm:inline">Back</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Terms of Service Hero Section -->
+    <section class="hero-section py-20 md:py-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-8 md:px-16">
+            <div class="text-center">
+                <h1 class="section-title text-4xl md:text-5xl lg:text-6xl leading-tight md:leading-tight lg:leading-tight">
+                    Terms of Service
+                </h1>
+                <p class="section-subtitle text-lg md:text-xl leading-relaxed mb-8 mx-auto max-w-2xl">
+                    Please read these terms and conditions carefully before using our website and services.
+                </p>
+                <p class="text-gray-600 text-sm">Last updated: January 2025</p>
+            </div>
+        </div>
+        
+        <!-- Decorative Elements -->
+        <div class="absolute top-10 right-10 w-72 h-72 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div class="absolute -bottom-8 left-10 w-72 h-72 bg-gradient-to-br from-green-200 to-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+    </section>
+
+    <!-- Terms of Service Content -->
+    <section class="py-20 md:py-32 bg-white">
+        <div class="max-w-4xl mx-auto px-8 md:px-16">
+            
+            <!-- Introduction -->
+            <div class="policy-section">
+                <h2>1. Introduction</h2>
+                <p>
+                    Welcome to Melbourne Website Agency ("we," "us," "our," or "Company"). These Terms of Service ("Terms") constitute a legally binding agreement between you ("User," "you," or "your") and Melbourne Website Agency regarding your use of our website, services, and any related digital properties.
+                </p>
+                <p>
+                    By accessing, browsing, or using our website and services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree with any part of these Terms, please do not use our services. We reserve the right to modify these Terms at any time, and your continued use of our services following such modifications constitutes your acceptance of the updated Terms.
+                </p>
+                <p>
+                    Melbourne Website Agency provides professional web design, digital marketing, SEO optimization, and related digital services to businesses and organizations. These Terms apply to all users of our website and recipients of our services.
+                </p>
+            </div>
+
+            <!-- User Agreements -->
+            <div class="policy-section">
+                <h2>2. User Agreements and Eligibility</h2>
+                
+                <h3>2.1 Eligibility Requirements</h3>
+                <p>
+                    By using our services, you represent and warrant that:
+                </p>
+                <ul>
+                    <li>You are at least 18 years of age or the legal age of majority in your jurisdiction</li>
+                    <li>You have the legal authority to enter into this agreement</li>
+                    <li>You are not prohibited from receiving services under applicable laws</li>
+                    <li>All information provided by you is accurate, current, and complete</li>
+                    <li>You will comply with all applicable laws and regulations in your use of our services</li>
+                </ul>
+
+                <h3>2.2 Account Responsibility</h3>
+                <p>
+                    If you create an account with Melbourne Website Agency, you are responsible for maintaining the confidentiality of your login credentials and password. You agree to accept responsibility for all activities that occur under your account. You must notify us immediately of any unauthorized use of your account or any other breach of security.
+                </p>
+
+                <h3>2.3 License Grant</h3>
+                <p>
+                    Melbourne Website Agency grants you a limited, non-exclusive, non-transferable, and revocable license to access and use our website and services solely for lawful purposes and in accordance with these Terms. This license does not include any right to resell, redistribute, or use our services for commercial purposes without explicit written permission.
+                </p>
+            </div>
+
+            <!-- Acceptable Use -->
+            <div class="policy-section">
+                <h2>3. Acceptable Use Policy</h2>
+                
+                <h3>3.1 Prohibited Activities</h3>
+                <p>
+                    You agree not to engage in any of the following prohibited activities:
+                </p>
+                <ul>
+                    <li>Violating any applicable laws, regulations, or third-party rights</li>
+                    <li>Transmitting viruses, malware, or any code of destructive nature</li>
+                    <li>Attempting to gain unauthorized access to our systems or networks</li>
+                    <li>Harassing, threatening, defaming, or abusing other users</li>
+                    <li>Engaging in spam, phishing, or fraudulent activities</li>
+                    <li>Reverse engineering, decompiling, or attempting to discover the source code of our services</li>
+                    <li>Removing or altering any proprietary notices, labels, or marks</li>
+                    <li>Using our services for illegal purposes or in violation of these Terms</li>
+                    <li>Interfering with the normal operation of our website or services</li>
+                    <li>Collecting or tracking personal information of others without consent</li>
+                </ul>
+
+                <h3>3.2 Content Restrictions</h3>
+                <p>
+                    You agree not to upload, post, or transmit any content that is:
+                </p>
+                <ul>
+                    <li>Illegal, obscene, defamatory, or offensive</li>
+                    <li>Infringing on intellectual property rights</li>
+                    <li>Harmful to minors in any way</li>
+                    <li>Promoting discrimination, hatred, or violence</li>
+                    <li>Misleading or deceptive</li>
+                </ul>
+
+                <h3>3.3 Compliance and Enforcement</h3>
+                <p>
+                    Melbourne Website Agency reserves the right to investigate and take appropriate legal action against anyone who violates these provisions, including removing offending content and terminating user accounts. We may cooperate with law enforcement authorities in prosecuting users who violate the law.
+                </p>
+            </div>
+
+            <!-- Intellectual Property -->
+            <div class="policy-section">
+                <h2>4. Intellectual Property Rights</h2>
+                
+                <h3>4.1 Our Intellectual Property</h3>
+                <p>
+                    All content on our website, including but not limited to text, graphics, logos, images, audio clips, and software, is the property of Melbourne Website Agency or its content suppliers and is protected by international copyright laws. The compilation of all content on this website is the exclusive property of Melbourne Website Agency and is protected by international copyright laws.
+                </p>
+
+                <h3>4.2 Your Intellectual Property</h3>
+                <p>
+                    If you submit any content to Melbourne Website Agency, including feedback, suggestions, or materials, you grant us a worldwide, royalty-free, perpetual, and irrevocable license to use, reproduce, modify, and distribute such content. You warrant that you own or have the necessary rights to submit such content.
+                </p>
+
+                <h3>4.3 Limited License</h3>
+                <p>
+                    You may download and print content from our website for personal, non-commercial use only, provided that you retain all copyright and proprietary notices. You may not reproduce, distribute, or transmit any content without our prior written permission.
+                </p>
+            </div>
+
+            <!-- Limitation of Liability -->
+            <div class="policy-section">
+                <h2>5. Limitation of Liability and Disclaimers</h2>
+                
+                <h3>5.1 Disclaimer of Warranties</h3>
+                <p>
+                    Melbourne Website Agency provides its website and services on an "AS IS" and "AS AVAILABLE" basis. We make no representations or warranties of any kind, express or implied, regarding the operation of our website or the information, content, or materials included on our website. To the fullest extent permissible by law, we disclaim all warranties, express or implied, including but not limited to implied warranties of merchantability and fitness for a particular purpose.
+                </p>
+
+                <h3>5.2 No Liability for Damages</h3>
+                <p>
+                    In no event shall Melbourne Website Agency, its directors, employees, or agents be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of our website or services, including but not limited to damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages.
+                </p>
+
+                <h3>5.3 Limitation of Liability</h3>
+                <p>
+                    To the maximum extent permitted by applicable law, the total liability of Melbourne Website Agency to you for any claims arising from or related to these Terms or our services shall not exceed the amount paid by you to us in the twelve (12) months preceding the claim, or fifty dollars ($50), whichever is less.
+                </p>
+
+                <h3>5.4 Service Interruption</h3>
+                <p>
+                    We do not warrant that our website or services will be uninterrupted, timely, secure, or error-free. We are not responsible for any delays, inaccuracies, errors, or omissions in any content or for any actions taken in reliance thereon. We do not guarantee continuous or uninterrupted access to our website or services.
+                </p>
+            </div>
+
+            <!-- Indemnification -->
+            <div class="policy-section">
+                <h2>6. Indemnification</h2>
+                <p>
+                    You agree to indemnify, defend, and hold harmless Melbourne Website Agency, its officers, directors, employees, agents, and successors from and against any and all claims, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or related to:
+                </p>
+                <ul>
+                    <li>Your use of our website or services</li>
+                    <li>Your violation of these Terms</li>
+                    <li>Your violation of any applicable law or regulation</li>
+                    <li>Your infringement of any third-party intellectual property rights</li>
+                    <li>Any content you submit or transmit through our services</li>
+                </ul>
+            </div>
+
+            <!-- Third-Party Links -->
+            <div class="policy-section">
+                <h2>7. Third-Party Links and Content</h2>
+                <p>
+                    Our website may contain links to third-party websites and resources. Melbourne Website Agency is not responsible for the content, accuracy, or practices of these external sites. Your use of third-party websites is governed by their terms and conditions. We do not endorse any third-party websites or products and assume no responsibility for any third-party content.
+                </p>
+            </div>
+
+            <!-- Termination -->
+            <div class="policy-section">
+                <h2>8. Termination</h2>
+                <p>
+                    Melbourne Website Agency reserves the right to terminate or suspend your access to our website and services at any time, with or without cause, and with or without notice. Upon termination, your right to use our services will immediately cease. We shall not be liable to you or any third party for any termination of your access to our services.
+                </p>
+            </div>
+
+            <!-- Modifications -->
+            <div class="policy-section">
+                <h2>9. Modifications to Services and Terms</h2>
+                <p>
+                    Melbourne Website Agency reserves the right to modify, suspend, or discontinue any aspect of our website or services at any time, with or without notice. We also reserve the right to modify these Terms at any time. Your continued use of our website or services following any modifications constitutes your acceptance of the updated Terms. We will notify users of significant changes to these Terms via email or by posting a notice on our website.
+                </p>
+            </div>
+
+            <!-- Governing Law -->
+            <div class="policy-section">
+                <h2>10. Governing Law and Jurisdiction</h2>
+                <p>
+                    These Terms of Service are governed by and construed in accordance with the laws of Victoria, Australia, without regard to its conflict of law principles. You agree to submit to the exclusive jurisdiction of the courts located in Victoria, Australia for the resolution of any disputes arising out of or related to these Terms or our services.
+                </p>
+            </div>
+
+            <!-- Dispute Resolution -->
+            <div class="policy-section">
+                <h2>11. Dispute Resolution</h2>
+                <p>
+                    Before initiating any legal proceedings, you agree to attempt to resolve any dispute with Melbourne Website Agency through good-faith negotiation. If negotiation fails, you agree to submit the dispute to binding arbitration in accordance with the rules of the Australian Arbitration Centre. The arbitration shall be conducted in English and shall take place in Victoria, Australia.
+                </p>
+            </div>
+
+            <!-- Severability -->
+            <div class="policy-section">
+                <h2>12. Severability</h2>
+                <p>
+                    If any provision of these Terms is found to be invalid, illegal, or unenforceable by a court of competent jurisdiction, such provision shall be modified to the minimum extent necessary to make it enforceable, or if such modification is not possible, the provision shall be severed. The remaining provisions of these Terms shall continue in full force and effect.
+                </p>
+            </div>
+
+            <!-- Entire Agreement -->
+            <div class="policy-section">
+                <h2>13. Entire Agreement</h2>
+                <p>
+                    These Terms of Service, together with our Privacy Policy and any other policies referenced herein, constitute the entire agreement between you and Melbourne Website Agency regarding your use of our website and services and supersede all prior and contemporaneous agreements, understandings, and negotiations, whether written or oral.
+                </p>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="policy-section">
+                <h2>14. Contact Information</h2>
+                <p>
+                    If you have any questions about these Terms of Service or wish to report a violation, please contact us at:
+                </p>
+                <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mt-4">
+                    <p class="font-semibold text-gray-900 mb-2">Melbourne Website Agency</p>
+                    <p class="text-gray-700 mb-2"><strong>Email:</strong> <a href="mailto:admin@test.com" class="primary-color hover:underline">admin@test.com</a></p>
+                    <p class="text-gray-700 mb-2"><strong>Website:</strong> <a href="https://test.com" class="primary-color hover:underline">https://test.com</a></p>
+                    <p class="text-gray-700"><strong>Response Time:</strong> We typically respond to inquiries within 24 business hours.</p>
+                </div>
+            </div>
+
+            <!-- Acknowledgment -->
+            <div class="policy-section bg-blue-50 border border-blue-200 rounded-lg p-8 mt-12">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Acknowledgment</h3>
+                <p class="text-gray-700">
+                    By using Melbourne Website Agency's website and services, you acknowledge that you have read these Terms of Service, understand them, and agree to be bound by all of their terms and conditions. If you do not agree to be bound by these Terms, please do not use our website or services.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-8 md:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full primary-gradient flex items-center justify-center">
+                            <i class="fas fa-globe text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">Melbourne Agency</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Creating exceptional web experiences that drive business growth and digital transformation.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc#features" class="footer-link">Web Design</a></li>
+                        <li><a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc#features" class="footer-link">SEO Optimization</a></li>
+                        <li><a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc#features" class="footer-link">Mobile Development</a></li>
+                        <li><a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc#benefits" class="footer-link">Digital Marketing</a></li>
+                        <li><a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc#benefits" class="footer-link">Brand Strategy</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc#about" class="footer-link">About Us</a></li>
+                        <li><a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc#testimonials" class="footer-link">Testimonials</a></li>
+                        <li><a href="blog.html" class="footer-link">Blog</a></li>
+                        <li><a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc#contact" class="footer-link">Contact</a></li>
+                        <li><a href="#" class="footer-link">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
+                        <li><a href="#" class="footer-link">Cookie Policy</a></li>
+                        <li><a href="#" class="footer-link">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Divider -->
+            <div class="border-t border-gray-800 pt-8 md:pt-12">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2025 Melbourne Website Agency. All rights reserved.
+                    </p>
+                    <div class="flex gap-6">
+                        <a href="privacy.html" class="text-gray-400 text-sm hover:text-white transition-colors duration-300">Privacy</a>
+                        <a href="terms.html" class="text-gray-400 text-sm hover:text-white transition-colors duration-300">Terms</a>
+                        <a href="blog.html" class="text-gray-400 text-sm hover:text-white transition-colors duration-300">Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
