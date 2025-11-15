@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Melbourne Website Agency Blog - Web Design, SEO, Digital Marketing Tips & Insights. Stay updated with the latest trends and strategies for online success.">
+    <meta name="keywords" content="web design blog, SEO tips, digital marketing, web trends, Melbourne, website agency">
+    <meta name="author" content="Melbourne Website Agency">
+    <title>Blog - Melbourne Website Agency | Web Design & Digital Marketing Insights</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background-color: #ffffff;
+            color: #1a1a1a;
+        }
+        
+        .primary-gradient {
+            background: linear-gradient(135deg, #5B4BFF 0%, #7c6cff 100%);
+        }
+        
+        .secondary-bg {
+            background-color: #EEF0FF;
+        }
+        
+        .accent-color {
+            color: #00E5A8;
+        }
+        
+        .accent-bg {
+            background-color: #00E5A8;
+        }
+        
+        .primary-color {
+            color: #5B4BFF;
+        }
+        
+        .btn-primary {
+            background-color: #5B4BFF;
+            color: white;
+            transition: all 0.3s ease-out;
+        }
+        
+        .btn-primary:hover {
+            background-color: #4a3acc;
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(91, 75, 255, 0.3);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease-out;
+        }
+        
+        .card-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card {
+            border-radius: 16px;
+            padding: 32px;
+            background-color: #ffffff;
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease-out;
+        }
+        
+        .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(91, 75, 255, 0.1);
+            border-color: #5B4BFF;
+        }
+        
+        .blog-card {
+            border-radius: 16px;
+            padding: 32px;
+            background-color: #ffffff;
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease-out;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(91, 75, 255, 0.1);
+            border-color: #5B4BFF;
+        }
+        
+        .blog-featured {
+            border-radius: 16px;
+            padding: 40px;
+            background-color: #ffffff;
+            border: 2px solid #5B4BFF;
+            box-shadow: 0 20px 50px rgba(91, 75, 255, 0.15);
+            transition: all 0.3s ease-out;
+        }
+        
+        .blog-featured:hover {
+            box-shadow: 0 30px 60px rgba(91, 75, 255, 0.2);
+        }
+        
+        .testimonial-card {
+            border-radius: 16px;
+            padding: 28px;
+            background-color: #ffffff;
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease-out;
+        }
+        
+        .testimonial-card:hover {
+            box-shadow: 0 20px 50px rgba(91, 75, 255, 0.1);
+            border-color: #5B4BFF;
+        }
+        
+        .faq-item {
+            border-radius: 16px;
+            border: 1px solid #f0f0f0;
+            overflow: hidden;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-question {
+            padding: 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-question:hover {
+            background-color: #EEF0FF;
+        }
+        
+        .faq-answer {
+            padding: 24px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #f0f0f0;
+            max-height: 500px;
+            overflow: hidden;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-answer.hidden {
+            max-height: 0;
+            padding: 0 24px;
+            display: none;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease-out;
+            color: #5B4BFF;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #666666;
+            max-width: 600px;
+        }
+        
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease-out;
+        }
+        
+        .mobile-menu.hidden {
+            display: none;
+        }
+        
+        .star-rating {
+            color: #fbbf24;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #5B4BFF 0%, #7c6cff 100%);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .cta-overlay {
+            background-color: rgba(91, 75, 255, 0.85);
+        }
+        
+        .footer-link {
+            transition: all 0.3s ease-out;
+            color: #666666;
+        }
+        
+        .footer-link:hover {
+            color: #5B4BFF;
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease-out;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #EEF0FF;
+            color: #5B4BFF;
+        }
+        
+        .social-icon:hover {
+            background-color: #5B4BFF;
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .blog-date {
+            font-size: 0.875rem;
+            color: #5B4BFF;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .blog-title {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        
+        .blog-excerpt {
+            font-size: 1rem;
+            color: #666666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .read-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #5B4BFF;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+        }
+        
+        .read-more-btn:hover {
+            color: #4a3acc;
+            transform: translateX(4px);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #ffffff 0%, #EEF0FF 100%);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="sticky-header shadow-sm">
+        <nav class="max-w-7xl mx-auto px-8 md:px-16 py-5 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full primary-gradient flex items-center justify-center">
+                    <i class="fas fa-globe text-white text-lg"></i>
+                </div>
+                <span class="text-xl font-bold primary-color hidden sm:inline">Melbourne Agency</span>
+            </a>
+            
+            <!-- Back Link -->
+            <a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc" class="text-gray-700 font-medium hover:primary-color transition-colors duration-300">
+                ← Back
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section py-20 md:py-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-8 md:px-16">
+            <div class="text-center">
+                <h1 class="section-title text-4xl md:text-5xl lg:text-6xl leading-tight md:leading-tight lg:leading-tight">
+                    Our Blog
+                </h1>
+                <p class="section-subtitle text-lg md:text-xl leading-relaxed mb-8 mx-auto max-w-2xl">
+                    Insights, strategies, and expert tips on web design, SEO, digital marketing, and transforming your online presence.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Decorative Elements -->
+        <div class="absolute top-10 right-10 w-72 h-72 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div class="absolute -bottom-8 left-10 w-72 h-72 bg-gradient-to-br from-green-200 to-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+    </section>
+
+    <!-- Blog Purpose Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-8 md:px-16">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Stay Ahead of Digital Trends</h2>
+                <p class="text-gray-700 text-lg leading-relaxed mb-8">
+                    Welcome to the Melbourne Website Agency blog, your go-to resource for cutting-edge insights on web design, SEO optimization, digital marketing strategies, and industry trends. Our expert team shares practical tips, case studies, and actionable advice to help Melbourne businesses and organizations succeed online. Whether you're looking to improve your search rankings, enhance user experience, or stay informed about the latest digital innovations, you'll find valuable content here to guide your digital transformation journey.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <span class="inline-block px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium text-sm">Web Design</span>
+                    <span class="inline-block px-4 py-2 rounded-full bg-green-100 text-green-700 font-medium text-sm">SEO Strategy</span>
+                    <span class="inline-block px-4 py-2 rounded-full bg-purple-100 text-purple-700 font-medium text-sm">Digital Marketing</span>
+                    <span class="inline-block px-4 py-2 rounded-full bg-pink-100 text-pink-700 font-medium text-sm">Industry Trends</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Blog Post Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-8 md:px-16">
+            <div class="mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Latest Post</h2>
+            </div>
+            
+            <div class="blog-featured">
+                <div class="flex flex-col gap-6">
+                    <div>
+                        <p class="blog-date">November 15, 2025</p>
+                        <h3 class="blog-title">The Complete Guide to Web Design Trends in 2025: Transform Your Online Presence</h3>
+                    </div>
+                    
+                    <p class="blog-excerpt">
+                        Discover the seven transformative web design trends reshaping 2025's digital landscape. From AI-powered personalization that delivers customized user experiences to minimalist design with bold typography, this comprehensive guide explores essential strategies for modern businesses. Learn how mobile-first Progressive Web Apps, sustainable design practices, and interactive immersive experiences engage audiences effectively. Voice search optimization and conversational interfaces revolutionize customer interaction, while advanced SEO and technical excellence ensure competitive search rankings. Whether implementing all trends or strategically selecting those aligned with your goals, Melbourne businesses can leverage these innovations to drive conversions, improve visibility, and create memorable digital experiences that deliver measurable results.
+                    </p>
+                    
+                    <div>
+                        <a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc/blog/the-complete-guide-to-web-design-trends-in-2025-tr.html" class="read-more-btn">
+                            Read Full Article
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid Section -->
+    <section class="py-16 md:py-24 secondary-bg">
+        <div class="max-w-7xl mx-auto px-8 md:px-16">
+            <div class="mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">More Articles Coming Soon</h2>
+                <p class="text-gray-600 text-lg">
+                    We're continuously creating valuable content to help you succeed online. Check back regularly for new articles on web design, SEO, digital marketing, and more.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Placeholder Blog Cards -->
+                <div class="blog-card">
+                    <div class="h-12 bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg mb-6 flex items-center justify-center">
+                        <svg class="w-8 h-8 primary-color" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <p class="blog-date mb-2">Coming Soon</p>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Upcoming Article</h4>
+                    <p class="text-gray-600 text-sm">
+                        Stay tuned for more expert insights on web design, SEO strategies, and digital marketing best practices.
+                    </p>
+                </div>
+
+                <div class="blog-card">
+                    <div class="h-12 bg-gradient-to-r from-green-100 to-blue-100 rounded-lg mb-6 flex items-center justify-center">
+                        <svg class="w-8 h-8 accent-color" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <p class="blog-date mb-2">Coming Soon</p>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Upcoming Article</h4>
+                    <p class="text-gray-600 text-sm">
+                        Explore the latest trends and innovations shaping the digital landscape in 2025 and beyond.
+                    </p>
+                </div>
+
+                <div class="blog-card">
+                    <div class="h-12 bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg mb-6 flex items-center justify-center">
+                        <svg class="w-8 h-8 primary-color" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <p class="blog-date mb-2">Coming Soon</p>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Upcoming Article</h4>
+                    <p class="text-gray-600 text-sm">
+                        Discover practical strategies for optimizing your website and improving your online visibility.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-20 md:py-32 relative overflow-hidden">
+        <div class="cta-overlay absolute inset-0"></div>
+        <div class="max-w-7xl mx-auto px-8 md:px-16 relative z-10">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">Ready to Transform Your Online Presence?</h2>
+                <p class="text-lg md:text-xl text-white opacity-95 mb-12 max-w-2xl mx-auto leading-relaxed">
+                    Apply the insights from our blog to your business. Let's create something extraordinary together.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc#contact" class="bg-white text-blue-600 rounded-full px-8 py-3 font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
+                        Get Started
+                    </a>
+                    <a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc" class="border-2 border-white text-white rounded-full px-8 py-3 font-semibold text-lg transition-all duration-300 hover:bg-white hover:bg-opacity-10">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-8 md:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full primary-gradient flex items-center justify-center">
+                            <i class="fas fa-globe text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">Melbourne Agency</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Creating exceptional web experiences that drive business growth and digital transformation.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc#features" class="footer-link">Web Design</a></li>
+                        <li><a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc#features" class="footer-link">SEO Optimization</a></li>
+                        <li><a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc#features" class="footer-link">Mobile Development</a></li>
+                        <li><a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc#benefits" class="footer-link">Digital Marketing</a></li>
+                        <li><a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc#benefits" class="footer-link">Brand Strategy</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc#about" class="footer-link">About Us</a></li>
+                        <li><a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc#testimonials" class="footer-link">Testimonials</a></li>
+                        <li><a href="blog.html" class="footer-link">Blog</a></li>
+                        <li><a href="https://test-acc-12349.github.io/melbourne-website-agency-2025-11-15-jawvc#contact" class="footer-link">Contact</a></li>
+                        <li><a href="#" class="footer-link">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
+                        <li><a href="#" class="footer-link">Cookie Policy</a></li>
+                        <li><a href="#" class="footer-link">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Divider -->
+            <div class="border-t border-gray-800 pt-8 md:pt-12">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2025 Melbourne Website Agency. All rights reserved.
+                    </p>
+                    <div class="flex gap-6">
+                        <a href="privacy.html" class="text-gray-400 text-sm hover:text-white transition-colors duration-300">Privacy</a>
+                        <a href="terms.html" class="text-gray-400 text-sm hover:text-white transition-colors duration-300">Terms</a>
+                        <a href="blog.html" class="text-gray-400 text-sm hover:text-white transition-colors duration-300">Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
